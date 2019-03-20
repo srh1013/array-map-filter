@@ -42,13 +42,34 @@ En sortie: [
 
  */
 
+const bouffe = [
+  {
+    food: 'Bacon',
+    isVegetarian: false
+  },
+  {
+    food: 'Sausage',
+    isVegetarian: false
+  },
+  {
+    food: 'Tofu',
+    isVegetarian: true
+  },
+  {
+    food: 'Chick Pea',
+    isVegetarian: true
+  }
+];
 function getFoodCategories(foods) {
-  return foods.map(arrItem =>
-    arrItem.isVegetarian ?
-      `${arrItem.food} is suitable for vegetarians` :
-      `${arrItem.food} is not suitable for vegetarians`);
-}
-
+  return foods.map(aliment => {
+    if (aliment.isVegetarian) {
+      return aliment.food + ' is suitable for vegetarians'
+    } else {
+      return aliment.food + ' is not suitable for vegetarians'
+    }
+  })
+};
+console.log(getFoodCategories(bouffe));
 
 // Ne pas modifier l'export
 module.exports = getFoodCategories;
