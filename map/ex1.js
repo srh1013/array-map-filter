@@ -21,8 +21,11 @@ En sortie: [
 
  */
 
-function getStringsLength(strings) {
-}
+const strings =   ['Chicken', 'Bacon', 'Tofu', 'Mayonnaise']
+const length = strings.map(getStringsLength(strings), {
+  return : strings + 'contains' + strings.length + 'characters'
+});add.
+console.log(length)
 
 // Si besoin, tu peux toujours visualiser le résultat avec console.log,
 // mais alors, il faut alors lancer l'exercice avec node map/ex1
