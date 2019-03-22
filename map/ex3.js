@@ -57,7 +57,21 @@ En sortie:
     }
   ]
 
- */
+ */function getMoviesFreshness(movies) {
+  movies.label="";
+  return movies.map(function (movie){
+    if (movie.rating<60){
+      return {name: movie.name, rating:movie.rating, label:"rotten"};
+    }
+    else if (movie.rating<=75){
+      return {name: movie.name, rating:movie.rating, label:"fresh"};
+    }
+    else {
+      return {name: movie.name, rating:movie.rating, label:"certified fresh"};
+    }
+  })
+}
+
 
 
 // Ne pas modifier l'export
