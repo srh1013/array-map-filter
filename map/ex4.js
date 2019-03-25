@@ -52,5 +52,23 @@ Tableau de sortie correspondant (toFixed transforme les nombres en chaînes)
 */
 
 
+function getCirclesProperties(radiuses) {
+  let tableau = [];
+  for (let i=0; i < radiuses.length; i++){
+    let radius = radiuses[i];
+    let circumference = 2 * Math.PI * radius;
+    circumference = circumference.toFixed(3);
+    let surface = Math.PI * radius * radius;
+    surface = surface.toFixed(3);
+    let monObjet = new Object();
+    monObjet.radius = radius;
+    monObjet.circumference = circumference;
+    monObjet.surface = surface;
+    tableau.push(monObjet);
+  }
+  return tableau;
+}
+
+
 // Ne pas modifier l'export
 module.exports = getCirclesProperties;

@@ -55,21 +55,21 @@ En sortie:
       rating: 60,
       label: 'fresh'
     }
-  ]
+  ] */
 
- */function getMoviesFreshness(movies) {
-  movies.label="";
-  return movies.map(function (movie){
-    if (movie.rating<60){
-      return {name: movie.name, rating:movie.rating, label:"rotten"};
-    }
-    else if (movie.rating<=75){
-      return {name: movie.name, rating:movie.rating, label:"fresh"};
-    }
-    else {
-      return {name: movie.name, rating:movie.rating, label:"certified fresh"};
-    }
-  })
+function getMoviesFreshness(movies) {
+  let tableau = [];
+  for (let i = 0; i < movies.length; i ++){
+      if (movies[i].rating < 60) {
+        movies[i].label = "rotten";
+      }
+      else if (movies[i].rating > 75) {
+        movies[i].label = "certified fresh";
+      }
+      else {movies[i].label = "fresh";}
+  }
+  return movies;
+    
 }
 
 
