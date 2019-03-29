@@ -29,7 +29,13 @@ Sortie attendue:
  */
 
 function filterOnPrice(products, maxPrice) {
+  let tableau = products.filter(function(product, price){
+    price = maxPrice;
+    if (product.price <= price){return product}
+  })
+  return tableau;
 }
+
 
 // Ne pas modifier l'export
 module.exports = filterOnPrice;

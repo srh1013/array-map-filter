@@ -16,6 +16,13 @@ Exemple d'entrée:
  */
 
 function getMultiplesOf(numbers, n) {
+	let tableau = [];
+	for (let i=0; i < numbers.length; i++){
+		if (numbers[i] % n == 0) {
+			tableau.push(numbers[i]);
+		}
+	}
+	return tableau;
 }
 
 // Ne pas modifier l'export

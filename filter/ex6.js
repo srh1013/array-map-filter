@@ -27,6 +27,14 @@ Sortie attendue:
 */
 
 function filterOffensiveComments(comments, bannedWords) {
+	let tableau = comments.filter(function(comment, mot){
+      mot = bannedWords;
+      	let motMaj = mot[0].toUpperCase();
+      	let motMaj2 = mot[1].toUpperCase();
+      	if ((comment.includes(mot[0]) == false && comment.includes(motMaj) == false) && (comment.includes(mot[1]) == false && comment.includes(motMaj2) == false)) { return comment;}
+      
+  })
+  return tableau;
 }
 
 // Ne pas modifier l'export

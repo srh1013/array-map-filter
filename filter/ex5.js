@@ -38,8 +38,8 @@ Exemple d'entrée:
 
  */
 
-function searchWordFilter(items, search) {
-}
+const searchWordFilter = (items, search) =>
+  items.filter(item => item.toLowerCase().indexOf(search) >= 0);
 
 // Ne pas modifier l'export
 module.exports = searchWordFilter;

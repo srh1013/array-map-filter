@@ -24,6 +24,11 @@ Sortie attendue:
  */
 
 function keepStarks(names) {
+	let tableau = names.filter(function (name){
+		name = name.split(" ");
+		if (name[1]== "Stark"){return name = name.join(" ")}
+	})
+	return tableau;
 }
 
 // Ne pas modifier l'export
